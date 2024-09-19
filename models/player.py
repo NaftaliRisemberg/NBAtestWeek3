@@ -13,3 +13,17 @@ class Player(db.Model):
     atr = db.Column(db.Integer, nullable=False)
     ppg_ratio = db.Column(db.Integer, nullable=False)
 
+    def get_dict(self):
+        return {
+            'id': self.id,
+            'player_name': self.player_name,
+            'team': self.team,
+            'position': self.position,
+            'season': self.season,
+            'points': self.points,
+            'games': self.games,
+            'two_percent': self.two_percent,
+            'three_percent': self.three_percent,
+            'atr': self.atr,
+            'ppg_ratio': self.ppg_ratio,
+        }

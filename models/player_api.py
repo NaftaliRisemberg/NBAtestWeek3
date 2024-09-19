@@ -1,7 +1,7 @@
-from sqlalchemy import false
 from db import db
 
 class PlayerAPI(db.Model):
+    __tablename__ = 'players_al_data'
     def __init__(self, id, player_name, position, age, games, games_started, minutesPg, field_goals,
                  field_attempts, field_percent, threeFg, three_attempts, three_percent, twoFg, two_attempts,
                  two_percent, effectFg_percent, ft_percent, offensiveRb, defensiveRb, totalRb,
